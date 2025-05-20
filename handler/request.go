@@ -11,6 +11,15 @@ type CreateOpeningRequest struct {
 	Salary   int64  `json:"salary"`
 }
 
+type GetOpeningRequest struct {
+	Role     string `json:"role"`
+	Company  string `json:"company"`
+	Location string `json:"location"`
+	IsRemote *bool  `json:"isRemote"`
+	Link     string `json:"link"`
+	Salary   int64  `json:"salary"`
+}
+
 func errRequiredParam(name, typ string) error {
 	return fmt.Errorf("parameter %s of type %s is required", name, typ)
 }
